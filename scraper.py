@@ -1,3 +1,5 @@
+# made by Vladimir Nagornyi
+
 import requests
 import datetime
 from bs4 import BeautifulSoup
@@ -5,7 +7,8 @@ import csv
 
 BASE_URL = 'https://globalnews.ca/search/facebook/'
 
-#https://globalnews.ca/search/facebook/?post_type=any&orderby=&paged=6&ajax=true
+
+# https://globalnews.ca/search/facebook/?post_type=any&orderby=&paged=6&ajax=true
 
 def get_html(url):
     result = ''
@@ -54,7 +57,6 @@ def add_to_csv(data):
         writer.writeheader()
         for i in data:
             writer.writerow(i)
-
 
 
 def main():
